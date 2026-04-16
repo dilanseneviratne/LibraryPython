@@ -92,5 +92,5 @@ def append_transaction(transaction: dict):
     with open(TRANSACTION_FILE, "a", newline ="") as f:
         writer = csv.DictWriter(f, fieldnames=TRANSACTION_HEADER)
         if not file_exists:
-            writer.writerheader()
+            writer.writeheader()
         writer.writerow(transaction)
