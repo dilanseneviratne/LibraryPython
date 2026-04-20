@@ -15,7 +15,7 @@ TRANSACTION_HEADER = "date, book_id, student_id, type"
 
 # Book File
 # reads book.csv and returns a list of book objectives
-def load_book():
+def load_books():
     books = []
     if not os.path.exists(BOOK_FILE):
         return books
@@ -81,7 +81,7 @@ def save_students(students):
 
 # Transaction File
 #Reads the transaction.csv and returns a list of Transaction Objects
-def load_transaction():
+def load_transactions():
     transactions = []
     if not os.path.exists(TRANSACTION_FILE):
         return transactions
