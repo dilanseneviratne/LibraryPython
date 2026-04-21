@@ -40,7 +40,7 @@ def load_books():
             ))
         except ValueError:
             continue
-        return books
+    return books
 
 
 # write all book objects to book.csv
