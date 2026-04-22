@@ -61,6 +61,7 @@ def add_book():
     while True:
         book_id = input("Enter Book ID (eg: AB01): ").strip()
         ok, err = v.validate_book_id(book_id)
+        if not ok: print_error(err); continue
         if find_book(book_id): print_error(f"Book ID '{book_id} already exists"); continue
         break
 
