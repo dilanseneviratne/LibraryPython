@@ -82,7 +82,7 @@ def add_book():
     author = input("Enter Author Name: ").strip()
 
     while True:
-        ok, copies, err = v.validate_copies(input("Enter Nimber of Copies(1 or 2): ").strip())
+        ok, copies, err = v.validate_copies(input("Enter Number of Copies(1 or 2): ").strip())
         if not ok: print_error(err)
         else:
             break
