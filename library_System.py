@@ -135,7 +135,7 @@ def edit_book():
 def search_book():
     print_header("SEARCH BOOK")
     query = input("Enter Book ID or part of Title: ").strip().lower()
-    results = [b for b in books if query in b.books_id.lower() or query in b.title.lower()]
+    results = [b for b in books if query in b.book_id.lower() or query in b.title.lower()]
     if not results:
         print_info("No books found.")
     else:
