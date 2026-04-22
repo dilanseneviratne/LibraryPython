@@ -105,7 +105,7 @@ def edit_book():
     book_id = input("Enter Book ID to edit: ").strip()
     book = find_book(book_id)
     if not book:
-        print_error(f"Book '{book_id}' added successfully ")
+        print_error(f"Book ID '{book_id}' not found.")
         pause(); return
 
     print(f"\n Current Details:\n{book}")
@@ -123,7 +123,7 @@ def edit_book():
 
     new_price = input(f"new Price [Rs. {book.price:.2f}]: Rs. ").strip()
     if new_price:
-        ok, price = v.validate_price(new_price)
+        ok, price, err = v.validate_price(new_price)
         if ok: book.price = price
         else: print_error(err + "- keeping original.")
 
