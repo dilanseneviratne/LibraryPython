@@ -8,8 +8,8 @@ class Book:
         self.availability = availability
         self.price = price
 
-    def to(self):
-        return f"{self.book_id}, {self.title}, {self.author}, {self.isbn}, {self.copies}, {self.availability}, {self.price:.2f}"
+    def to_csv(self):
+        return f"{self.book_id},{self.title},{self.isbn},{self.author},{self.copies},{self.availability},{self.price:.2f}"
 
     def __str__(self):
         status = "Available" if self.availability > 0 else "All Issued"
