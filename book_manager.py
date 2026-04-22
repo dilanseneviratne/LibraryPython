@@ -47,7 +47,7 @@ def add_book():
     # Title
     while True:
         title = input("Enter Title (letters only, max 20 characters): ").strip()
-        if not v.validate_title(title):
+        if not v.is_validate_title(title):
             print("Invalid title. Letters and spaces only, maximum of 20 characters only.")
             continue
         break

@@ -29,7 +29,8 @@ def validate_book_id(book_id):
 
 #Title: Letters and space only, maximum characters 20.
 def validate_title(title):
-    if not re.fullmatch(r"[A-Za-z]{1,20}", title):
+    if not title.strip(): return False, "Title cannot be blank."
+    if not re.fullmatch(r"[A-Za-z ]{1,20}", title):
         return False, "Title must be only letters, maximum of 20 characters."
     return True, ""
 
