@@ -96,7 +96,7 @@ def return_book():
         for t in active
     )
     if not issue_exists:
-        print(f"No active issue found for Book '{book_id}' and Student '{student_id}'}'.")
+        print(f"No active issue found for Book '{book_id}' and Student '{student_id}'.")
         return
 
     #Check availability won't exceed copies
@@ -146,6 +146,6 @@ def view_transactions():
     print(f"{'Date':<12} {'Book ID':<10} {'Student ID':<12} {'Type':<10}")
     print("-" * 55)
     for t in transactions:
-        type_label = "Issue"['type'] == 1 else "Return"
+        type_label = "Issue" if t['type'] == 1 else "Return"
         print(f"{t['date']:<12} {t['book_id']:<10} {t['student_id']:<12} {type_label:<10}")
     print("-" * 55)
