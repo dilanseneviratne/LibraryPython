@@ -1,6 +1,3 @@
-from plotly.graph_objs.layout.scene import xaxis, yaxis
-
-
 def show_trend_graph(transactions):
     """
     Display a trend graph showing the number of books issued per date.
@@ -18,9 +15,9 @@ def show_trend_graph(transactions):
 
     #Filter only issue transactions (type 1)
     issue_data = [
-        {"data": tx.data, "count": 1}
+        {"date": tx.date, "count": 1}
         for tx in transactions
-        if tx.tx_type == 1
+        if tx.type == 1
     ]
 
     if not issue_data:
@@ -57,7 +54,7 @@ def show_trend_graph(transactions):
     )
 
     fig.update_traces(textposition = "outside")
-    fig.show()
+    fig.show(renderer="browser")
 
     print("\n Trend graph opened in your browser.")
     input("\n Press Enter to return to menu...")
