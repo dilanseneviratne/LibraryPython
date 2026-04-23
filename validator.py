@@ -72,4 +72,4 @@ def validate_date(date_str):
         datetime.strptime(date_str, "%d/%m/%Y")
         return True, ""
     except ValueError:
-        return False, None, "Date must be in DD/MM/YYYY format (eg: 20/04/2026)."
+        return False, "Date must be in DD/MM/YYYY format (e.g. 20/04/2026)."

@@ -119,4 +119,4 @@ def append_transactions(tx):
     with open(TRANSACTION_FILE, "a") as f:
         if not file_exists:
             f.write(TRANSACTION_HEADER + "\n")
-            f.write(tx.to_csv() + "\n")
+        f.write(tx.to_csv() + "\n")

@@ -242,8 +242,8 @@ def issue_book():
     book.availability -= 1
     fm.save_books(books)
 
-    print_success(f"Book '{book.title}' issued to [{student.first_name} on {date_str}.")
-    print(f"Remaining copies available: {book.availabiity}")
+    print_success(f"Book '{book.title}' issued to {student.first_name} on {date_str}.")
+    print(f"Remaining copies available: {book.availability}")
     pause()
 
 
