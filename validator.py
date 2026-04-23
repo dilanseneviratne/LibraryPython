@@ -62,7 +62,7 @@ def validate_student_id(student_id):
 
 #First name: letters only, maximum should be 10 characters
 def validate_first_name(name):
-    if not re.fullmatch(r"[A-Za-z]{1,10}]", name):
+    if not re.fullmatch(r"[A-Za-z]{1,10}", name):
         return False, "First name must be letters only, maximum 10 characters."
     return True, ""
 
