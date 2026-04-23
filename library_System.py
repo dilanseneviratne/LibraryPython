@@ -48,8 +48,8 @@ def find_student(student_id):
     return None
 
 def active_issues(book_id, student_id):
-    issued = sum(1 for tx in transactions if tx.book_id.upper() == book_id.upper() and tx.student_id == student_id and tx.type == 1)
-    returned = sum(1 for tx in transactions if tx.book_id.upper() == book_id.upper() and tx.student_id == student_id and tx.type == 2)
+    issued   = sum(1 for tx in transactions if tx.book_id.upper() == book_id.upper() and tx.student_id == student_id and tx.tx_type == 1)
+    returned = sum(1 for tx in transactions if tx.book_id.upper() == book_id.upper() and tx.student_id == student_id and tx.tx_type == 2)
     return issued - returned
 
 
@@ -215,14 +215,14 @@ def issue_book():
         print_error(f"Book ID '{book_id}' not found.")
         pause(); return
 
+    if book.availability <= 0:
+        print_error(f"No copies of '{book.title}' are available.")
+        pause(); return
+
     student_id = input("Enter Student ID: ").strip()
     student = find_student(student_id)
     if not student:
         print_error(f"Student ID '{student_id}' not found.")
-        pause(); return
-
-    if book.availability <= 0:
-        print_error(f"No copies of '{book.title}' are available.")
         pause(); return
 
     if active_issues(book_id, student_id) > 0:
@@ -240,7 +240,7 @@ def issue_book():
     fm.append_transactions(tx)
 
     book.availability -= 1
-    fm.save_books(book)
+    fm.save_books(books)
 
     print_success(f"Book '{book.title}' issued to [{student.first_name} on {date_str}.")
     print(f"Remaining copies available: {book.availabiity}")
