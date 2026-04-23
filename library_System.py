@@ -149,12 +149,12 @@ def search_book():
 def view_all_books():
     print_header("VIEW All BOOKS")
     if not books:
-        print_info("No Books in the Library yet.")
+        print_info("No books in the library yet.")
     else:
-        print(f"Total: {len(books)} book(s)\n")
+        print(f" Total: {len(books)} book(s)\n")
         for book in books:
             print(book)
-            print(" " + "-" * 40)
+            print("  " + "-" * 40)
     pause()
 
 

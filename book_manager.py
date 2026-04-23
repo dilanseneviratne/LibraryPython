@@ -15,8 +15,8 @@ def display_books(books: list[dict]):
     print(f"{'ID':<6} {'Title':<22} {'ISBN-13':<15} {'Author':<20} {'Cop':>4} {'Avail':>6} {'Price':>7}")
     print("-" * 85)
     for b in books:
-        print(f"{b['book_id']:<6} {b['title']:<22} {b['isbn']:<15} {b['author']:<20} "
-              f"{b['copies']:>4} {b['availability']:>6} £{b['price']:>6.2f}")
+        print(f"  {b['book_id']:<6} {b['title']:<22} {b['isbn']:<15} {b['author']:<20} "
+              f"{b['copies']:>4} {b['availability']:>6} Rs{b['price']:>6.2f}")
         print("-" * 85)
 
 

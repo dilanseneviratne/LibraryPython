@@ -19,5 +19,5 @@ class Book:
                 f" Author: {self.author}\n"
                 f" Copies: {self.copies}\n"
                 f" Availability: {self.availability}\n"
-                f" Price: {self.price:.2f}\n"
+                f" Price: Rs.{self.price:.2f}\n"
                 f" Status: {status}")
