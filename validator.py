@@ -18,7 +18,7 @@ def validate_isbn13(isbn):
         total += int(digits[i]) * weight
     check_digit = (10 - (total % 10)) % 10
     if check_digit != int(digits[12]):
-        return False, f"ISBN-13 check digit onvalid. Expected {check_digit}, but got {digits[12]}"
+        return False, f"ISBN-13 check digit invalid. Expected {check_digit}, but got {digits[12]}"
     return True, ""
 
 # Book id: 2 letters + 2 digits(eg:AB01)

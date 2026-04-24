@@ -1,8 +1,9 @@
-book_id,title,isbn,author,copies,availability,price
-AB01,The Great Gatsby,9780743273565,F Scott Fitzgerald,2,1,12.99
-AB02,1984,9780451524935,George Orwell,2,2,9.99
-AB03,To Kill a Mockingbird,9780061935466,Harper Lee,1,1,11.50
-CD04,Brave New World,9780060850524,Aldous Huxley,2,0,10.75
-CD05,The Catcher in Rye,9780316769174,J D Salinger,1,1,8.99
-EF06,Lord of the Flies,9780571191475,William Golding,2,2,9.50
-BQ01,Beast Quest,9789556790115,Adam Blade,2,2,10.00
+book_id, title, isbn, author, copies, availability, price
+AB01,The Great Gatsby,9780743273565,F Scott Fitzgerald,2,2,1200.99
+AB02,1984,9780451524935,George Orwell,2,2,900.99
+AB03,To Kill a Mockingbird,9780061935466,Harper Lee,1,1,1100.50
+CD04,Brave New World,9780060850524,Aldous Huxley,2,0,1000.75
+CD05,The Catcher in Rye,9780316769174,J D Salinger,1,1,800.99
+EF06,Lord of the Rings,9780571191475,J. R. R. Tolkien,2,2,1600.00
+BQ01,Beast Quest,9789556790115,Adam Blade,2,1,1000.00
+FF01,Famous Five,9789556790115,Enid Blyton,2,2,2000.00
