@@ -75,9 +75,15 @@ def add_book():
     while True:
         isbn = input("Enter ISBN-13 (13 digits): ").strip()
         ok, err = v.validate_isbn13(isbn)
-        if not ok: print_error(err)
-        else:
-            break
+        if not ok: 
+            print_error(err)
+            continue
+            
+        if any(b.isbn == isbn for b in books):
+            print_error(f"Book with ISBN '{isbn}' already exists.")
+            continue
+            
+        break
 
     author = input("Enter Author Name: ").strip()
 
